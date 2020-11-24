@@ -1,8 +1,6 @@
-import { atom } from 'recoil';
+//import { atom } from 'recoil';
+import { atom } from 'jotai'
 
-const todoListState = atom({
-    key: 'todoListState',
-    default: [],
-});
+const todoListState = atom([]);
 
 export default todoListState

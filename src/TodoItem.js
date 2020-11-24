@@ -1,10 +1,10 @@
-import {
-  useRecoilState,
-} from 'recoil';
+//import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai'
 import todoListState from "./TodoListState";
 
 function TodoItem({ item }) {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+  //const [todoList, setTodoList] = useRecoilState(todoListState);
+  const [todoList, setTodoList] = useAtom(todoListState);
   const index = todoList.findIndex((listItem) => listItem === item);
 
   const editItemText = ({ target: { value } }) => {

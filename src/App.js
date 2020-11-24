@@ -1,12 +1,15 @@
 import './App.css';
-import { RecoilRoot } from 'recoil';
+//import { RecoilRoot } from 'recoil';
+import { Provider } from 'jotai'
 import TodoList from './TodoList'
 
 function App() {
   return (
-    <RecoilRoot>
+    //<RecoilRoot>
+    <Provider>
       <TodoList />
-    </RecoilRoot>
+    </Provider>
+    //</RecoilRoot>
   );
 }
 
