@@ -1,3 +1,4 @@
+import './App.css';
 import {
     useRecoilValue,
 } from 'recoil';
@@ -9,7 +10,7 @@ function TodoList() {
     const todoList = useRecoilValue(todoListState);
 
     return (
-        <>
+        <div className='App'>
             {/* <TodoListStats /> */}
             {/* <TodoListFilters /> */}
             <TodoItemCreator />
@@ -17,7 +18,7 @@ function TodoList() {
             {todoList.map((todoItem) => (
                 <TodoItem key={todoItem.id} item={todoItem} />
             ))}
-        </>
+        </div>
     );
 }
 export default TodoList
